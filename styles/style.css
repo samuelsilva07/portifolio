@@ -14,10 +14,12 @@
 /* configurações gerais */
 
 :root {
-    --color-background-main: #0b0b0b;
+    --color-background-main: #131313;
     --color-text: #e1e1e1;
     --color-background-alt: #3e1f65;
 
+    --color-logo: #56009c;
+    --color-logo-highlight: #6a00c1;
     --font-subtitle: "Teko", sans-serif;
     --font-text: "Libre Franklin", sans-serif; 
     --font-text-highlight: "Chivo", sans-serif;
@@ -31,11 +33,76 @@
 body {
     background-color: var(--color-background-main);
     color: var(--color-text);
+    font-family: var(--font-text);
+}
+
+i {
+    font-size: 1.5em;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
 }
 
 /* HEADER */
 
+header {
+    background-color: black;
+    /* box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.145); */
+    padding: 0.7em 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1em 3em;
+}
+
+header:hover {
+    box-shadow: 0px 4px 1em rgba(255, 255, 255, 0.101);
+    transition: 0.3s all ease;
+}
+
+#header__logo {
+    color: var(--color-logo);
+}
+
+#header__logo:hover {
+    color: var(--color-logo-highlight);
+    transition: 0.3s all ease-in-out;
+}
+
+#header__titulo {
+    font-family: var(--font-text-highlight);
+    font-size: 1.7em;
+    color: var(--color-text);
+
+    display: inline;
+}
+
+#header__titulo:hover {
+    color: white;
+    font-weight: 500;
+    transition: 0.5s all ease-in-out;
+}
+
+.header__links-item {
+    padding: 0.5em 1em;
+}
+
+.header__links-item:hover {
+    color: white;
+    background-color: var(--color-background-alt);
+    transition: 0.3s all ease-in-out;
+    box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.151);
+}
+
 /* MAIN */
+
+main {
+    margin: 3.5em 0;
+}
 
 .secao-tech-stack__imagem {
     height: 5em;
