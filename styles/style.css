@@ -28,17 +28,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body { 
     background-color: var(--color-background-main);
     color: var(--color-text);
     font-family: var(--font-text);
-}
-
-.grid-container {
-    display: grid;
-    /* configurações de Grid Layout!!! */
 }
 
 i {
@@ -58,12 +54,10 @@ header {
     padding: 0.7em 0;
 
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 1em 3em;
-
-    /* Grid Layout */
 }
 
 header:hover {
@@ -94,26 +88,57 @@ header:hover {
     transition: 0.5s all ease-in-out;
 }
 
+menu {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center center;
+    gap: 14px;
+}
+
+.header__icone-menu {
+    color: var(--color-text);
+    background: none;
+    border: none;
+    width: 1em;
+}
+
+.header__icone-menu:hover {
+    color: white;
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 10px white);
+    transition: 0.3s 0s all ease-in;
+    
+}
+
+nav {
+    width: 100%;
+    /* background-color: white; */
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
 .header__links-item {
-    padding: 0.5em 1em;
+    border-top: 1px solid var(--color-text);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
 }
 
 .header__links-item:hover {
     color: white;
     background-color: var(--color-background-alt);
-    transition: 0.3s all ease-in-out;
     box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.151);
+    transform: scale(1.1);
+    overflow: auto;
+    transition: 0.3s all ease-in-out;
 }
-
-/* menu {
-    Grid Layout
-} */
 
 /* MAIN */
 
 main {
     margin: 3.5em 0;
-    /* Grid Layout (sections) */
 }
 
 .secao-tech-stack__imagem {
@@ -123,5 +148,5 @@ main {
 /* FOOTER */
 
 /* footer {
-    Grid Layout
+
 } */
