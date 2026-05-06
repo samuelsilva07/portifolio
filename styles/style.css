@@ -49,6 +49,12 @@ i {
     color: white;
 }
 
+hr {
+    width: 100px;
+    margin: auto;
+    padding: 0.25em 0 0.5em;
+}
+
 .titulo-secao {
     font-family: var(--font-subtitle);
     font-size: 2.5em;
@@ -60,18 +66,32 @@ header {
     background-color: black;
     /* box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.145); */
     padding: 0.7em 0 0;
+    width: 100%;
 
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: center;
-    gap: 1em 3em;
+    gap: 1em;
 }
 
 header:hover {
     box-shadow: 0px 4px 1em rgba(255, 255, 255, 0.101);
     transition: 0.3s all;
 }
+
+/* configurações para a logo e o ícone do menu */
+
+menu { 
+    width: 90%;
+    margin-bottom: 0.5em; /* dimimuir ao ampliar o menu */
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 14px; */
+}
+
 
 .header__logo {
     color: var(--color-logo);
@@ -96,14 +116,6 @@ header:hover {
     transition: 0.5s all ease-in-out;
 }
 
-menu {
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    place-items: center center;
-    gap: 14px;
-}
-
 .header__icone-menu {
     color: var(--color-text);
     background: none;
@@ -113,15 +125,17 @@ menu {
 
 .header__icone-menu:hover {
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
     filter: drop-shadow(1px 1px 10px white);
-    transition: 0.3s 0s all ease-in;
+    transition: 0.2s 0s all ease-in;
     
-}
+}  
+
+/* configurações dos links para navegação na página */
 
 nav {
     width: 100%;
-    /* background-color: white; */
+    /* display: none; */
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -139,7 +153,7 @@ nav {
     background-color: var(--color-background-alt);
     transform: scale(1.1);
     box-shadow: 0px 4px 1em rgba(255, 255, 255, 0.17);
-    transition: 0.3s all ease-in-out;
+    transition: 0.35s all ease-in-out;
 }
 
 
@@ -148,6 +162,7 @@ nav {
 
 main {
     margin: 3em 0;
+    text-align: center;
 }
 
 section:nth-child(even) {
@@ -170,9 +185,11 @@ section:nth-child(even) {
     color: white;
 }
 
-/* secao-hero img {
-    
-} */
+.secao-hero img {
+    background: white;
+    width: 200px;
+    height: 200px;   
+}
 
 .secao-tech-stack__item i {
     font-size: 3.5em;
