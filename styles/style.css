@@ -18,7 +18,9 @@
 :root {
     --color-background-main: #1D0A2E;
     --color-background-section: #131313;
+    --color-background-muted: #131313aa;
     --color-text: #e1e1e1;
+    --color-text-muted: #e1e1e1ae;
     --color-background-alt: #3e1f65;
 
     --color-logo: #56009c;
@@ -166,6 +168,8 @@ main {
 
 section{
     margin: 2em 0;
+    
+    padding: 1em 1.5em;
 }
 
 
@@ -202,14 +206,55 @@ section{
     height: 250px;   
 }
 
+/* SOBRE MIM */
+
 .secao-sobre-mim {
-    padding: 1em;
     background-color: var(--color-background-section);
 }
 
-.secao-tech-stack__item i {
-    font-size: 3.5em;
+.secao-sobre-mim p {
+    max-width: 600px;
+    margin: 1em auto;
+    line-height: 1.5em;
+    text-align: justify;
 }
+
+/* TECK STACK */
+
+.secao-tech-stack__container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em 0;
+    align-items: center;
+    justify-content: center;
+    
+    max-width: 700px;
+    margin: auto;
+}
+
+.secao-tech-stack__item {
+    flex-basis: 300px;
+    text-align: center;
+    /* background-color: var(--color-background-muted); */
+}
+
+.secao-tech-stack__item i {
+    color: var(--color-text-muted);
+    /* height: 100px; */
+    font-size: 5em;
+}
+
+.secao-tech-stack__item:hover, .secao-tech-stack__item i:hover {
+    transition: all 0.4s ease;
+}
+.secao-tech-stack__item:hover {
+    transform: scale(1.15);
+}
+
+.secao-tech-stack__item i:hover {
+    color: var(--color-logo-highlight);
+}
+
 
 /* FOOTER */
 
