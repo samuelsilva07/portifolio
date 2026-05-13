@@ -2,7 +2,7 @@
 
 /* fontes */
 
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); /* "IBM Plex Mono", monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); /* "Courier Prime", monospace; */
 
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap'); /* "Teko", sans-serif; */
 
@@ -17,17 +17,18 @@
 
 :root {
     --color-background-main: #1D0A2E;
-    --color-background-section: #131313;
-    --color-background-muted: #131313aa;
+    --color-background-section: #161616;
+    --color-background-muted: #0000004c;
     --color-text: #e1e1e1;
     --color-text-muted: #e1e1e1ae;
     --color-background-alt: #3e1f65;
 
     --color-logo: #56009c;
-    --color-logo-highlight: #6a00c1;
+    --color-logo-highlight: #8330c8;
+    --color-button: #510094;
+    --font-title: "Chivo", sans-serif;
     --font-subtitle: "Teko", sans-serif;
     --font-text: "Libre Franklin", sans-serif; 
-    --font-text-highlight: "Chivo", sans-serif;
 }
 
 * {
@@ -59,6 +60,7 @@ hr {
 
 .titulo-secao {
     font-family: var(--font-subtitle);
+    color: var(--color-text);
     font-size: 2.5em;
 }
 
@@ -105,7 +107,7 @@ menu {
 }
 
 .header__titulo {
-    font-family: var(--font-text-highlight);
+    font-family: var(--font-title);
     font-size: 1.7em;
     color: var(--color-text);
 
@@ -151,7 +153,6 @@ nav {
 }
 
 .header__links-item:hover {
-    color: white;
     background-color: var(--color-background-alt);
     transform: scale(1.1);
     box-shadow: 0px 4px 1em rgba(255, 255, 255, 0.17);
@@ -188,8 +189,8 @@ section{
 
 .secao-hero__titulo {
     font-size: 2.5em;
-    font-family: var(--font-text-highlight);
-    color: rgb(255, 255, 255);
+    font-family: var(--font-title);
+    color: white;
 }
 
 .secao-hero hr {
@@ -235,13 +236,14 @@ section{
 .secao-tech-stack__item {
     flex-basis: 300px;
     text-align: center;
+    font-family: "Courier Plex", monospace;
     /* background-color: var(--color-background-muted); */
 }
 
 .secao-tech-stack__item i {
     color: var(--color-text-muted);
     /* height: 100px; */
-    font-size: 5em;
+    font-size: 4.5em;
 }
 
 .secao-tech-stack__item:hover, .secao-tech-stack__item i:hover {
@@ -253,6 +255,61 @@ section{
 
 .secao-tech-stack__item i:hover {
     color: var(--color-logo-highlight);
+}
+
+.logo-js {
+    background-color: var(--color-background-muted);
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+.secao-projetos__container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3em 15%;
+    
+    max-width: 1200px;
+    margin: auto;
+    transition: all 0.3s;
+}
+
+.secao-projetos__projeto {
+    background-color: var(--color-background-muted);
+    padding: 2em;
+    flex-grow: 1;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.secao-projetos__projeto p {
+    padding: 1em;
+    color: var(--color-text);
+}
+
+.secao-projetos__projeto button {
+    background-color: initial;
+    padding: 0.25em 3em;
+    border: 2px solid var(--color-button);
+    border-radius: 5px;
+}
+
+.secao-projetos__projeto button:hover {
+    background-color: var(--color-button);
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 2px 0.5em rgba(255, 255, 255, 0.336);
+}
+
+.secao-projetos__projeto a {
+    text-decoration: none;
+    color: var(--color-logo);
+}
+
+.secao-projetos__projeto a:hover {
+    color: white;
 }
 
 
