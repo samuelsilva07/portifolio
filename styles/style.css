@@ -92,7 +92,8 @@ menu {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; - adicionar ao configurar JS! */
+    justify-content: center;
     /* gap: 14px; */
 }
 
@@ -125,6 +126,8 @@ menu {
     background: none;
     border: none;
     width: 1em;
+
+    display: none; /* retirar ao configurar JS! */
 }
 
 .header__icone-menu:hover {
@@ -176,7 +179,7 @@ section{
 
 /* HERO */
 
-.secao-hero {
+.hero {
     padding: 3em;
     
     display: flex;
@@ -187,21 +190,21 @@ section{
     
 }
 
-.secao-hero__titulo {
+.hero__titulo {
     font-size: 2.5em;
     font-family: var(--font-title);
     color: white;
 }
 
-.secao-hero hr {
+.hero hr {
     padding-bottom: 1em;
 }
 
-.secao-hero__subtitulo {
+.hero__subtitulo {
     font-size: 1em;
 }
 
-.secao-hero img {
+.hero img {
     background: rgba(255, 255, 255, 0.337);
     width: 250px;
     height: 250px;   
@@ -209,11 +212,11 @@ section{
 
 /* SOBRE MIM */
 
-.secao-sobre-mim {
+.sobre-mim {
     background-color: var(--color-background-section);
 }
 
-.secao-sobre-mim p {
+.sobre-mim p {
     max-width: 600px;
     margin: 1em auto;
     line-height: 1.5em;
@@ -222,7 +225,7 @@ section{
 
 /* TECK STACK */
 
-.secao-tech-stack__container {
+.tech-stack__container {
     display: flex;
     flex-flow: row wrap;
     gap: 2em 0;
@@ -233,27 +236,27 @@ section{
     margin: auto;
 }
 
-.secao-tech-stack__item {
+.tech-stack__item {
     flex-basis: 300px;
     text-align: center;
     font-family: "Courier Plex", monospace;
     /* background-color: var(--color-background-muted); */
 }
 
-.secao-tech-stack__item i {
+.tech-stack__item i {
     color: var(--color-text-muted);
     /* height: 100px; */
     font-size: 4.5em;
 }
 
-.secao-tech-stack__item:hover, .secao-tech-stack__item i:hover {
+.tech-stack__item:hover, .tech-stack__item i:hover {
     transition: all 0.4s ease;
 }
-.secao-tech-stack__item:hover {
+.tech-stack__item:hover {
     transform: scale(1.15);
 }
 
-.secao-tech-stack__item i:hover {
+.tech-stack__item i:hover {
     color: var(--color-logo-highlight);
 }
 
@@ -263,7 +266,7 @@ section{
     padding-left: 8px;
 }
 
-.secao-projetos__container {
+.projetos__container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -275,7 +278,7 @@ section{
     transition: all 0.3s;
 }
 
-.secao-projetos__projeto {
+.projetos__item {
     background-color: var(--color-background-muted);
     padding: 2em;
     flex-grow: 1;
@@ -283,19 +286,19 @@ section{
     min-width: 300px;
 }
 
-.secao-projetos__projeto p {
+.projetos__item p {
     padding: 1em;
     color: var(--color-text);
 }
 
-.secao-projetos__projeto button {
+.projetos__item button {
     background-color: initial;
     padding: 0.25em 3em;
     border: 2px solid var(--color-button);
     border-radius: 5px;
 }
 
-.secao-projetos__projeto button:hover {
+.projetos__item button:hover {
     background-color: var(--color-button);
     color: white;
     transform: scale(1.05);
@@ -303,18 +306,66 @@ section{
     box-shadow: 4px 2px 0.5em rgba(255, 255, 255, 0.336);
 }
 
-.secao-projetos__projeto a {
+.projetos__item a {
     text-decoration: none;
     color: var(--color-logo);
 }
 
-.secao-projetos__projeto a:hover {
+.projetos__item a:hover {
     color: white;
 }
 
 
 /* FOOTER */
 
-/* footer {
+.contatos {
+    background-color: var(--color-background-section);
+    padding: 1em;
+    text-align: center;
+}
 
-} */
+.contatos__container {
+    text-align: center;
+    width: 54px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+    
+}
+
+.contatos__item {
+    margin: auto;
+    text-align: center;
+}
+
+.contatos__icone {
+    color: var(--color-text-muted);
+    height: 54px;    
+    border: 0.2px solid var(--color-text-muted);
+    border-radius: 50%;
+
+
+}
+
+.contatos__icone:hover {
+    color: white;
+    border-color: white;
+    background-color: var(--color-button);
+
+    transform: scale(1.15);
+
+    transition: all 0.2s ease;
+}
+
+.contatos__icone i {
+    position: relative;
+    top: 8px;
+}
+
+
+.contatos p {
+    margin-top: 12px;
+}
+
