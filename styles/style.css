@@ -43,7 +43,7 @@ body {
     font-family: var(--font-text);
 }
 
-i {
+i, .subtitulo {
     font-size: 1.5em;
 }
 
@@ -61,7 +61,16 @@ hr {
     font-family: var(--font-subtitle);
     color: var(--color-text);
     font-size: 2.5em;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 1rem;
 }
+
+.container {
+    margin: 6em auto 1em;
+}
+
 
 /* HEADER */
 
@@ -82,7 +91,8 @@ header:hover {
     transition: 0.3s all;
 }
 
-/* configurações para a logo e o ícone do menu */
+
+/* MENU */
 
 menu { 
     width: 90%;
@@ -99,11 +109,12 @@ menu {
 
 .header__logo {
     color: var(--color-logo);
+    transition: 0.4s all ease-in-out;
 }
 
 .header__logo:hover {
     color: var(--color-logo-highlight);
-    transition: 0.3s all ease-in-out;
+    transition: 0.4s all ease-in-out;
 }
 
 .header__titulo {
@@ -112,12 +123,13 @@ menu {
     color: var(--color-text);
 
     display: inline;
+    transition: 0.4s all ease-in-out;
 }
 
 .header__titulo:hover {
     color: white;
     font-weight: 500;
-    transition: 0.5s all ease-in-out;
+    transition: 0.4s all ease-in-out;
 }
 
 .header__icone-menu {
@@ -127,17 +139,20 @@ menu {
     width: 1em;
 
     display: none; /* retirar ao configurar JS! */
+    transition: 0.2s all ease-in;
+
 }
 
 .header__icone-menu:hover {
     color: white;
     transform: scale(1.05);
     filter: drop-shadow(1px 1px 10px white);
-    transition: 0.2s 0s all ease-in;
+    transition: 0.2s all ease-in;
     
 }  
 
-/* configurações dos links para navegação na página */
+
+/* NAV */
 
 nav {
     width: 100%;
@@ -152,13 +167,14 @@ nav {
     width: 100%;
     text-align: center;
     padding: 10px;
+    transition: 0.3s all ease-out;
 }
 
 .header__links-item:hover {
     background-color: var(--color-background-alt);
     transform: scale(1.1);
     box-shadow: 0px 4px 1em rgba(255, 255, 255, 0.17);
-    transition: 0.35s all ease-in-out;
+    transition: 0.3s all ease-out;
 }
 
 
@@ -177,6 +193,7 @@ section{
 .hr__titulo {
     padding-bottom: 2em;
 }
+
 
 
 /* HERO */
@@ -212,61 +229,66 @@ section{
     height: 250px;   
 }
 
+
 /* SOBRE MIM */
 
 .sobre-mim {
     background-color: var(--color-background-section);
 }
 
-.sobre-mim p {
+.sobre-mim__container {
     max-width: 600px;
-    margin: 1em auto;
+    margin: 2em auto;
     line-height: 1.5em;
     text-align: justify;
 }
+
 
 /* TECK STACK */
 
 .tech-stack__container {
     display: flex;
     flex-flow: row wrap;
-    gap: 2em 0;
+    gap: 5em 130px;
     align-items: center;
     justify-content: center;
     
-    max-width: 700px;
-    margin: auto;
+    max-width: 650px;
 }
 
 .tech-stack__item {
-    flex-basis: 300px;
+    width: 120px;
     text-align: center;
-    font-family: "Courier Plex", monospace;
-    /* background-color: var(--color-background-muted); */
-}
-
-.tech-stack__item i {
-    color: var(--color-text-muted);
-    /* height: 100px; */
-    font-size: 4.5em;
-}
-
-.tech-stack__item:hover, .tech-stack__item i:hover {
+    margin: auto;
+    font-family: "Courier Plex", monospace;    
     transition: all 0.4s ease;
 }
+
+.tech-stack__item img {
+    filter: grayscale(45%);
+    margin-bottom: 0.5em;
+    transition: all 0.4s ease;
+}
+
+.tech-stack__item:hover, .tech-stack__item img:hover {
+    transition: all 0.4s ease;
+    filter: none;
+}
 .tech-stack__item:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
-.tech-stack__item i:hover {
-    color: var(--color-logo-highlight);
+.tech-stack__item img::selection {
+    filter: none;
+} 
+
+.tech-stack__texto {
+    margin-top: 1em;
+    font-size: 1.2em;
 }
 
-.logo-js {
-    background-color: var(--color-background-muted);
-    padding-top: 8px;
-    padding-left: 8px;
-}
+
+/* PROJETOS */
 
 .projetos__container {
     display: flex;
@@ -276,7 +298,7 @@ section{
     gap: 3em 15%;
     
     max-width: 1200px;
-    margin: auto;
+    
     transition: all 0.3s;
 }
 
@@ -295,27 +317,24 @@ section{
 
 .projetos__item button {
     background-color: initial;
+    color: var(--color-logo);
+
     padding: 0.25em 3em;
     border: 2px solid var(--color-button);
     border-radius: 5px;
+    
+    transition: all 0.3s ease;
 }
 
 .projetos__item button:hover {
     background-color: var(--color-button);
     color: white;
+    
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 4px 2px 0.5em rgba(255, 255, 255, 0.336);
+    transition: all 0.3s ease;
+    box-shadow: 4px 2px 0.5em rgba(255, 255, 255, 0.244);
 }
 
-.projetos__item a {
-    text-decoration: none;
-    color: var(--color-logo);
-}
-
-.projetos__item a:hover {
-    color: white;
-}
 
 
 /* CONTATOS */
@@ -327,13 +346,14 @@ section{
     text-align: center;
 }
 
-.contatos__container {
+.contatos__container {  
     text-align: center;
     width: 54px;
-    margin: 1em auto;
+   
+    margin: 4em auto 1em;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* alterar em Media Queries! */
     align-items: center;
     row-gap: 1.5em;
 }
@@ -347,10 +367,14 @@ section{
 
 .contatos__icone {
     color: var(--color-text-muted);
+    
     height: 54px;   
     width: 54px; 
+    
     border: 0.2px solid var(--color-text-muted);
     border-radius: 50%;
+
+    transition: all 0.2s ease-in;
 }
 
 .contatos__icone:hover {
@@ -359,8 +383,7 @@ section{
     background-color: var(--color-button);
 
     transform: scale(1.15);
-
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in;
 }
 
 .contatos__icone i {
@@ -374,14 +397,16 @@ section{
 }
 
 footer{
-    margin-bottom: 0;
+    text-align: center;
     background-color: var(--color-background-section);
     color: var(--color-text);
-    text-align: center;
+
+    margin-bottom: 0;
+    transition: all 0.35s;
 }
 
 footer a:hover {
     color: white;
     font-weight: bold;
-    transition: all 0.3s;
+    transition: all 0.35s;
 }
