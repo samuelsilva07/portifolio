@@ -22,10 +22,10 @@
     --color-text: #e1e1e1;
     --color-text-muted: #e1e1e1ae;
     --color-background-alt: #3e1f65;
+    --color-shadow: rgba(255, 255, 255, 0.244);
 
-    --color-logo: #56009c;
+    --color-logo: #510094;
     --color-logo-highlight: #8330c8;
-    --color-button: #510094;
     --font-title: "Chivo", sans-serif;
     --font-subtitle: "Teko", sans-serif;
     --font-text: "Libre Franklin", sans-serif; 
@@ -71,6 +71,19 @@ hr {
     margin: 6em auto 1em;
 }
 
+button {
+    background-color: unset;
+    color: var(--color-logo);
+
+    border: 2px solid var(--color-logo);
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--color-logo);
+    color: white;
+}
+
 
 /* HEADER */
 
@@ -84,10 +97,12 @@ header {
     flex-flow: column wrap;
     align-items: center;
     gap: 1em;
+
+    transition: 0.3s all;
 }
 
 header:hover {
-    box-shadow: 0px 4px 1em rgba(255, 255, 255, 0.101);
+    box-shadow: 0px 0px 1em var(--color-shadow);
     transition: 0.3s all;
 }
 
@@ -105,7 +120,6 @@ menu {
     justify-content: center;
     /* gap: 14px; */
 }
-
 
 .header__logo {
     color: var(--color-logo);
@@ -183,6 +197,8 @@ nav {
 
 main {
     text-align: center;
+    /* max-width: 1000px;
+    margin: auto;    */
 }
 
 section{
@@ -193,7 +209,6 @@ section{
 .hr__titulo {
     padding-bottom: 2em;
 }
-
 
 
 /* HERO */
@@ -229,11 +244,28 @@ section{
     height: 250px;   
 }
 
+.hero__botao {
+    font-weight: 450;
+    
+    width: 100%;
+    padding: 0.5em 0;
+    margin-top: 1.5em;
+    
+    transition: all 0.35s ease;
+}
+
+.hero__botao:hover {
+    box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.244);
+    transition: all 0.35s ease;
+
+}
+
 
 /* SOBRE MIM */
 
 .sobre-mim {
     background-color: var(--color-background-section);
+    padding: 2em;
 }
 
 .sobre-mim__container {
@@ -253,38 +285,37 @@ section{
     align-items: center;
     justify-content: center;
     
-    max-width: 650px;
+    max-width: 800px;
 }
 
 .tech-stack__item {
-    width: 120px;
-    text-align: center;
-    margin: auto;
     font-family: "Courier Plex", monospace;    
+    text-align: center;
+
+    margin: auto;
+    
     transition: all 0.4s ease;
 }
 
 .tech-stack__item img {
-    filter: grayscale(45%);
+    background-color: var(--color-background-muted);
+    height: 150px;
+    
+    padding: 2em;
     margin-bottom: 0.5em;
+    
+    filter: grayscale(45%);
     transition: all 0.4s ease;
 }
 
-.tech-stack__item:hover, .tech-stack__item img:hover {
+.tech-stack img:hover {
     transition: all 0.4s ease;
     filter: none;
-}
-.tech-stack__item:hover {
     transform: scale(1.1);
-}
-
-.tech-stack__item img::selection {
-    filter: none;
 } 
 
 .tech-stack__texto {
     margin-top: 1em;
-    font-size: 1.2em;
 }
 
 
@@ -304,8 +335,10 @@ section{
 
 .projetos__item {
     background-color: var(--color-background-muted);
+   
     padding: 2em;
     flex-grow: 1;
+    
     max-width: 400px;
     min-width: 300px;
 }
@@ -315,21 +348,12 @@ section{
     color: var(--color-text);
 }
 
-.projetos__item button {
-    background-color: initial;
-    color: var(--color-logo);
-
+.projetos__botao {
     padding: 0.25em 3em;
-    border: 2px solid var(--color-button);
-    border-radius: 5px;
-    
     transition: all 0.3s ease;
 }
 
-.projetos__item button:hover {
-    background-color: var(--color-button);
-    color: white;
-    
+.projetos__botao:hover {
     transform: scale(1.05);
     transition: all 0.3s ease;
     box-shadow: 4px 2px 0.5em rgba(255, 255, 255, 0.244);
@@ -374,23 +398,22 @@ section{
     border: 0.2px solid var(--color-text-muted);
     border-radius: 50%;
 
-    transition: all 0.2s ease-in;
+    transition: all 0.15s ease;
 }
 
 .contatos__icone:hover {
     color: white;
     border-color: white;
-    background-color: var(--color-button);
+    background-color: var(--color-logo);
 
-    transform: scale(1.15);
-    transition: all 0.2s ease-in;
+    transform: scale(1.1);
+    transition: all 0.15s ease;
 }
 
 .contatos__icone i {
     position: relative;
     top: 8px;
 }
-
 
 .contatos p {
     margin-top: 12px;
