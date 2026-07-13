@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {  /* header + contatos */
+
+    /* HEADER */
+
+    header {
+        padding: 0 1em;
+        margin: auto;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: none;
+    }
+
+
+    /* MENU */
+
+    menu {
+        width: 70%;
+        margin: none;
+    }
+
+    .header__icone-menu {
+        display: none;
+    }
+
+
+    /* NAV */
+    
+    nav {
+        width: 100%;
+        flex-flow: row nowrap;
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5em;
+    }
+
+    .header__links-item {
+        padding: 0;
+        border: none;
+        text-align: center;
+        transition: 0.3s all ease-out;
+    }
+
+    .header__links-item:hover {
+        background: none;
+        color: white;
+        transform: scale(1.05);
+        box-shadow: none;
+        transition: 0.3s all ease-out;
+    }
+
+    /* HERO */
+
+
+    /* CONTATOS */
+
+
+}

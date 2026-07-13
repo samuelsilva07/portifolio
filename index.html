@@ -10,6 +10,7 @@
     <!-- estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
     <!-- favicon -->
     <title>Samuel Silva</title>
 </head>
@@ -20,9 +21,9 @@
                 <i class="bi bi-code-slash" class="header__icone-tag"></i>
                 <h2 class="header__titulo">Samuel Silva</h2>
             </div>
-            <button class="header__icone-menu"><i class="bi bi-list"></i></button>
+            <div class="header__icone-menu" id="nav-toggle"><i class="bi bi-list"></i></div>
         </menu>
-        <nav>
+        <nav id="nav">
             <a href="#sobre-mim" class="link header__links-item">Sobre mim</a>
             <a href="#teck-stack" class="link header__links-item">Tech Stack</a>
             <a href="#projetos" class="link header__links-item">Projetos</a>
@@ -141,5 +142,6 @@
             <p>&copy; <a href="https://github.com/samuelsilva07" target="_blank" rel="external" class="link">Samuel Silva</a> - 2026</p>
         </footer>
     </section>
+    <script src="script/script.js"></script>
 </body>
 </html>

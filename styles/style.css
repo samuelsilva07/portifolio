@@ -95,12 +95,10 @@ button {
 
 header {
     background-color: black;
-    /* box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.145); */
-    padding-top: 1em;
     width: 100%;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     align-items: center;
     gap: 1em;
 
@@ -117,14 +115,15 @@ header:hover {
 
 menu { 
     width: 90%;
-    margin-bottom: 0.5em; /* dimimuir ao ampliar o menu */
+    padding: 1em;
     
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
-    /* justify-content: space-between; - adicionar ao configurar JS! */
-    justify-content: center;
-    /* gap: 14px; */
+    justify-content: space-between; 
+    gap: 1em;
+
+    transition: 0.3s ease-in-out;
 }
 
 .header__logo {
@@ -158,15 +157,13 @@ menu {
     border: none;
     width: 1em;
 
-    display: none; /* retirar ao configurar JS! */
     transition: 0.2s all ease-in;
-
 }
 
 .header__icone-menu:hover {
     color: white;
     transform: scale(1.05);
-    filter: drop-shadow(1px 1px 10px white);
+    filter: drop-shadow(1px 1px 10px var(--color-shadow));
     transition: 0.2s all ease-in;
     
 }  
@@ -176,9 +173,8 @@ menu {
 
 nav {
     width: 100%;
-    /* display: none; */
-    display: flex;
-    flex-flow: column wrap;
+    display: none;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -192,11 +188,10 @@ nav {
 
 .header__links-item:hover {
     background-color: var(--color-background-alt);
-    transform: scale(1.1);
+    transform: scaleY(1.05);
     box-shadow: 0px 4px 1em rgba(255, 255, 255, 0.17);
     transition: 0.3s all ease-out;
 }
-
 
 
 /* MAIN */
@@ -251,7 +246,7 @@ section{
 }
 
 .hero__imagem:hover {
-    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.108));
+    filter: drop-shadow(0px 0px 4px var(--color-shadow));
     transition: 0.3s all ease-out;
 }
 
@@ -266,7 +261,7 @@ section{
 }
 
 .hero__botao:hover {
-    box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.14);
+    box-shadow: 0px 0px 80px var(--color-shadow);
     transition: all 0.35s ease;
 
 }
