@@ -245,7 +245,7 @@ section{
 }
 
 .hero__imagem {
-    width: 300px;
+    width: 350px;
     min-width: 250px;
     transition: 0.3s all ease-out;
 }
@@ -369,7 +369,6 @@ section{
     transition: all 0.3s ease;
     box-shadow: 4px 2px 0.5em rgba(255, 255, 255, 0.244);
 }
-
 
 
 /* CONTATOS */
