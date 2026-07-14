@@ -53,7 +53,7 @@ i, .subtitulo {
 }
 
 hr {
-    width: 150px;
+    background-color: var(--color-text-muted);
     margin: auto;
 }
 
@@ -95,19 +95,23 @@ button {
 
 header {
     background-color: black;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-
+    /* width: 100%; */
+    
     transition: 0.3s all;
 }
 
 header:hover {
     box-shadow: 0px 0px 1em var(--color-shadow);
     transition: 0.3s all;
+}
+
+.header__container {
+    max-width: 992px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
 
 
@@ -164,14 +168,15 @@ menu {
     color: white;
     transform: scale(1.05);
     filter: drop-shadow(1px 1px 10px var(--color-shadow));
+    cursor: pointer;
     transition: 0.2s all ease-in;
-    
 }  
 
 
 /* NAV */
 
 nav {
+    font-size: 14px;
     width: 100%;
     display: none;
     flex-direction: column;
@@ -198,31 +203,24 @@ nav {
 
 main {
     text-align: center;
-    /* max-width: 1000px;
-    margin: auto;    */
 }
 
 section{
-    margin: 2em 0;
+    margin: 2em auto;
     padding: 1em 1.5em;
-}
-
-.hr__titulo {
-    padding-bottom: 2em;
 }
 
 
 /* HERO */
 
 .hero {
-    padding: 3em;
+    padding: 3em 0;
     
     display: flex;
-    flex-flow: row wrap-reverse;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-evenly;
-    gap: 5em;
-    
+    gap: 3.5em;
 }
 
 .hero__titulo {
@@ -240,7 +238,8 @@ section{
 }
 
 .hero__imagem {
-    width: 350px;
+    width: 50%;
+    max-width: 400px;
     min-width: 250px;
     transition: 0.3s all ease-out;
 }
@@ -250,12 +249,17 @@ section{
     transition: 0.3s all ease-out;
 }
 
+.hero__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .hero__botao {
     font-weight: 450;
     
     width: 100%;
-    padding: 0.5em 0;
-    margin-top: 1.5em;
+    padding: 0.5em 3em;
     
     transition: all 0.35s ease;
 }
@@ -263,7 +267,6 @@ section{
 .hero__botao:hover {
     box-shadow: 0px 0px 80px var(--color-shadow);
     transition: all 0.35s ease;
-
 }
 
 
@@ -370,8 +373,8 @@ section{
 
 .contatos {
     background-color: var(--color-background-section);
-    padding: 1em;
-    margin-bottom: 0;
+    padding: 2em 2em 1em;
+    margin: unset;
     text-align: center;
 }
 
@@ -379,10 +382,10 @@ section{
     text-align: center;
     width: 54px;
    
-    margin: 4em auto 1em;
+    margin: 4em auto 2em;
 
     display: flex;
-    flex-direction: column; /* alterar em Media Queries! */
+    flex-direction: column; 
     place-content: center;
     row-gap: 1.5em;
 }
@@ -423,14 +426,6 @@ div.contatos__item {
     margin-top: 12px;
 }
 
-footer{
-    text-align: center;
-    background-color: var(--color-background-section);
-    color: var(--color-text);
-
-    margin-bottom: 0;
-    transition: all 0.35s;
-}
 
 footer a:hover {
     color: white;

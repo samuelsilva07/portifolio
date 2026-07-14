@@ -16,27 +16,31 @@
 </head>
 <body>
     <header>
-        <menu>
-            <div class="header__logo">
-                <i class="bi bi-code-slash" class="header__icone-tag"></i>
-                <h2 class="header__titulo">Samuel Silva</h2>
-            </div>
-            <div class="header__icone-menu" id="nav-toggle"><i class="bi bi-list"></i></div>
-        </menu>
-        <nav id="nav">
-            <a href="#sobre-mim" class="link header__links-item">Sobre mim</a>
-            <a href="#teck-stack" class="link header__links-item">Tech Stack</a>
-            <a href="#projetos" class="link header__links-item">Projetos</a>
-            <a href="#contato" class="link header__links-item">Contato</a>
-        </nav>
+        <div class="header__container">
+            <menu>
+                <div class="header__logo">
+                    <i class="bi bi-code-slash" class="header__icone-tag"></i>
+                    <h2 class="header__titulo">Samuel Silva</h2>
+                </div>
+                <div class="header__icone-menu" id="nav-toggle"><i class="bi bi-list"></i></div>
+            </menu>
+            <nav id="nav">
+                <a href="#sobre-mim" class="link header__links-item">Sobre mim</a>
+                <a href="#teck-stack" class="link header__links-item">Tech Stack</a>
+                <a href="#projetos" class="link header__links-item">Projetos</a>
+                <a href="#contato" class="link header__links-item">Contato</a>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="hero">
             <div class="hero__conteudo">
                 <h1 class="hero__titulo">Samuel Silva</h1>
                 <p class="hero__subtitulo">Desenvolvedor de Software Júnior</p>
-                <a href="#" class="hero__link"><button class="botao-alt hero__botao">Baixar currículo</button></a>
-                <a href="#projetos" class="hero__link"><button class="botao hero__botao">Acessar projetos</button></a>
+                <div class="hero__links">
+                    <a href="#"><button class="botao-alt hero__botao">Baixar currículo</button></a>
+                    <a href="#projetos"><button class="botao hero__botao">Acessar projetos</button></a>
+                </div>
             </div>
             <img src="images/imagem-hero.png" alt="imagem-hero" class="hero__imagem">
         </section>
@@ -109,7 +113,7 @@
             </div>
         </section>
     </main>
-    <section class="contatos" id="contato">
+    <footer class="contatos" id="contato">
         <h2 class="titulo-secao">Contatos</h2>
         <div class="contatos__container">
             <div class="contatos__item">
@@ -137,11 +141,8 @@
                 <p>GitHub</p>
             </div>
         </div>
-        <hr class="hr__interno">
-        <footer>
-            <p>&copy; <a href="https://github.com/samuelsilva07" target="_blank" rel="external" class="link">Samuel Silva</a> - 2026</p>
-        </footer>
-    </section>
+        <p>&copy; <a href="https://github.com/samuelsilva07" target="_blank" rel="external" class="link">Samuel Silva</a> - 2026</p>
+    </footer>
     <script src="script/script.js"></script>
 </body>
 </html>
