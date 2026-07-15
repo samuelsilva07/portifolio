@@ -17,12 +17,13 @@
 
 :root {
     --color-background-main: #1D0A2E;
+    --color-background-alt: #3e1f65;
     --color-background-section: #161616;
     --color-background-muted: #0000004c;
     --color-text: #e1e1e1;
     --color-text-muted: #e1e1e1ae;
-    --color-background-alt: #3e1f65;
     --color-shadow: rgba(255, 255, 255, 0.244);
+    --color-scrollbar: #858585;
 
     --color-logo: #510094;
     --color-logo-highlight: #8330c8;
@@ -90,6 +91,7 @@ button {
     background-color: var(--color-logo);
     color: white;
 }
+
 
 /* HEADER */
 
@@ -214,7 +216,7 @@ section{
 /* HERO */
 
 .hero {
-    padding: 3em 0;
+    padding: 3em 1em;
     
     display: flex;
     flex-direction: column-reverse;
@@ -240,13 +242,13 @@ section{
 .hero__imagem {
     width: 50%;
     max-width: 400px;
-    min-width: 250px;
-    transition: 0.3s all ease-out;
+    min-width: 280px;
+    transition: 0.5s all ease-out;
 }
 
 .hero__imagem:hover {
     filter: drop-shadow(0px 0px 4px var(--color-shadow));
-    transition: 0.3s all ease-out;
+    transition: 0.5s all ease-out;
 }
 
 .hero__links {
@@ -265,7 +267,7 @@ section{
 }
 
 .hero__botao:hover {
-    box-shadow: 0px 0px 80px var(--color-shadow);
+    box-shadow: 0px 0px 20px 20px var(--color-shadow);
     transition: all 0.35s ease;
 }
 
@@ -432,3 +434,24 @@ footer a:hover {
     font-weight: bold;
     transition: all 0.35s;
 }
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-text-muted);
+}
+ 
