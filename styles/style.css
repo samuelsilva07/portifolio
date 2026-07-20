@@ -277,6 +277,7 @@ section{
 .sobre-mim {
     background-color: var(--color-background-section);
     padding: 2em;
+    font-size: 1em;
 }
 
 #sobre-mim__container {
@@ -285,7 +286,9 @@ section{
     line-height: 1.5em;
     text-align: justify;
 }
-
+.sobre-mim p {
+    line-height: 1.6em;
+}
 
 /* TECK STACK */
 
