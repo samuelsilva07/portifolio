@@ -4,7 +4,7 @@
 
     /* CONTATOS */
 
-    .contatos__container {
+    #contatos__container {
         flex-direction: row;
         gap: 15vw;
     }
@@ -18,7 +18,7 @@
         padding: 0 1em;
     }
     
-    .header__container {
+    #header__container {
         margin: auto;
         flex-direction: row;
         align-items: center;

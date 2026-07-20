@@ -107,7 +107,7 @@ header:hover {
     transition: 0.3s all;
 }
 
-.header__container {
+#header__container {
     max-width: 992px;
     
     display: flex;
@@ -279,7 +279,7 @@ section{
     padding: 2em;
 }
 
-.sobre-mim__container {
+#sobre-mim__container {
     max-width: 600px;
     margin: 2em auto;
     line-height: 1.5em;
@@ -289,7 +289,7 @@ section{
 
 /* TECK STACK */
 
-.tech-stack__container {
+#tech-stack__container {
     display: flex;
     flex-flow: row wrap;
     gap: 5em 130px;
@@ -332,7 +332,7 @@ section{
 
 /* PROJETOS */
 
-.projetos__container {
+#projetos__container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -380,7 +380,7 @@ section{
     text-align: center;
 }
 
-.contatos__container {  
+#contatos__container {  
     text-align: center;
     width: 54px;
    
