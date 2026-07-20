@@ -21,12 +21,12 @@ function exibirTechStack(techStack) {
         containerTechStack.innerHTML += `
         <!-- ${elemento.nome} -->
         <div class="tech-stack__item">      
-        <img src="${elemento.link}"/>
-        <p class="tech-stack__texto">${elemento.nome}</p>
+            <img src="${elemento.link}"/>
+            <p class="tech-stack__texto">${elemento.nome}</p>
         </div>
         `;
     }
-    console.log("Elementos adicionados!.");
+    console.log("Elementos adicionados!");
 }
 
 function exibirProjetos(projetos) {
@@ -38,22 +38,21 @@ function exibirProjetos(projetos) {
             <p>${elemento.descricao}</p>
             <a href="${elemento.link}" target="_blank" rel="noopener norefferer"><button class="botao projetos__botao">Acesse o projeto</button></a>
         </article>`;
-        console.log("Elemento adicionado.");
     }
+    console.log("Elementos adicionados!");
 }
 
 /* Carregar dados das seções da página */
 
 document.addEventListener("DOMContentLoaded", () => {
     obterDados("data/tech-stack.json", exibirTechStack);
-    obterDados("data/projetos.json", exibirProjetos);
+    obterDados("data/projetos.json", exibirProjetos); 
 });
-
 
 /* Ampliar itens do menu */
 
-let botaoNav = document.getElementById("nav-toggle");
-let nav = document.getElementById("nav")
+const botaoNav = document.getElementById("nav-toggle");
+const nav = document.getElementById("nav")
 
 botaoNav.addEventListener("click", () => {
     if (nav.style.display === "none") {
@@ -62,3 +61,6 @@ botaoNav.addEventListener("click", () => {
         nav.style.display = "none";
     }
 });
+
+
+/* Fechar nav ao clicar em um item */
