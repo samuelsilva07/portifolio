@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "Simulação de fila de hospital",
+        "descricao": "Esse programa simula o sistema de um hospital fictício, que realiza o atendimento de seus pacientes baseado em seu nível de urgência.",
+        "link": "https://github.com/samuelsilva07/fila-hospital-C"
+    },
+    {
+        "nome": "Estrutura de Dados em C",
+        "descricao": "Implementações que produzi durante meus estudos em Estruturas de Dados, com exemplos práticos e aplicados a cenários realistas.",
+        "link": "https://github.com/samuelsilva07/estrutura-de-dados-c"
+    },
+    {
+        "nome": "EDA com dados de redes sociais",
+        "descricao": "Análise de dados sobre postagens em redes sociais no Brasil, com o objetivo de entender os fatores que mais chamam a atenção dos brasileiros na Internet." ,
+        "link": "https://github.com/samuelsilva07/analise-redes-sociais"
+    }
+]

@@ -44,7 +44,7 @@ body {
     font-family: var(--font-text);
 }
 
-i, .subtitulo {
+i {
     font-size: 1.5em;
 }
 
@@ -347,11 +347,23 @@ section{
 .projetos__item {
     background-color: var(--color-background-muted);
    
-    padding: 2em;
+    padding: 1.5em;
     flex-grow: 1;
     
     max-width: 400px;
     min-width: 300px;
+
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projetos__item h3 {
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
 .projetos__item p {

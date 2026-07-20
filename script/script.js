@@ -34,9 +34,9 @@ function exibirProjetos(projetos) {
     for (const elemento of projetos) {
         containerProjetos.innerHTML += `
         <article class="projetos__item">
-            <h3 class="subtitulo">${elemento.nome}</h3>
+            <h3>${elemento.nome}</h3>
             <p>${elemento.descricao}</p>
-            <a href="${elemento.link}"><button class="botao projetos__botao">Acesse o projeto</button></a>
+            <a href="${elemento.link}" target="_blank" rel="noopener norefferer"><button class="botao projetos__botao">Acesse o projeto</button></a>
         </article>`;
         console.log("Elemento adicionado.");
     }
@@ -46,7 +46,7 @@ function exibirProjetos(projetos) {
 
 document.addEventListener("DOMContentLoaded", () => {
     obterDados("data/tech-stack.json", exibirTechStack);
-    // obterDados("data/projetos.json", exibirProjetos);
+    obterDados("data/projetos.json", exibirProjetos);
 });
 
 
