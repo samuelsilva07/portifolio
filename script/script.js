@@ -31,12 +31,22 @@ function exibirTechStack(techStack) {
 
 function exibirProjetos(projetos) {
     const containerProjetos = document.getElementById("projetos__container");
+    let botao;
+    
     for (const elemento of projetos) {
+        if (elemento.link === null) {
+            botao = `
+            <button class="projetos__botao--alt">Em desenvolvimento</button>`; 
+        } else { 
+            botao = `
+            <a href="${elemento.link}" target="_blank" rel="noopener norefferer"><button class="projetos__botao">Acesse o projeto</button></a>`;
+        }
+        
         containerProjetos.innerHTML += `
         <article class="projetos__item">
             <h3>${elemento.nome}</h3>
             <p>${elemento.descricao}</p>
-            <a href="${elemento.link}" target="_blank" rel="noopener norefferer"><button class="botao projetos__botao">Acesse o projeto</button></a>
+            ${botao}
         </article>`;
     }
     console.log("Elementos adicionados!");

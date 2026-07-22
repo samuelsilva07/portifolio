@@ -13,5 +13,10 @@
         "nome": "EDA com dados de redes sociais",
         "descricao": "Análise de dados sobre postagens em redes sociais no Brasil, com o objetivo de entender os fatores que mais chamam a atenção dos brasileiros na Internet." ,
         "link": "https://github.com/samuelsilva07/analise-redes-sociais"
+    },
+    {
+        "nome": "Sistema para loja de informática",
+        "descricao": "Software para o atendimento de clientes e gerenciamento de estoque/serviços para uma empresa de informática fictícia, desenvolvido em Java",
+        "link": null
     }
 ]
