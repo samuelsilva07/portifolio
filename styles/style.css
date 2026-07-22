@@ -73,16 +73,17 @@ hr {
 }
 
 button {
-    border: 2px solid var(--color-logo);
-    border-radius: 5px;
-}
-
-.botao {
     background-color: unset;
     color: var(--color-logo);
+
+    border: 2px solid var(--color-logo);
+    border-radius: 5px;
+    padding: 0.25em 3em;
+
+    transition: all 0.35s ease;
 }
 
-.botao:hover {
+button:hover {
     background-color: var(--color-logo);
     color: white;
 }
@@ -258,12 +259,9 @@ section{
 }
 
 .hero__botao {
-    font-weight: 450;
-    
+    font-weight: 450;  
     width: 100%;
     padding: 0.5em 3em;
-    
-    transition: all 0.35s ease;
 }
 
 .hero__botao:hover {
@@ -374,15 +372,26 @@ section{
     color: var(--color-text);
 }
 
-.projetos__botao {
-    padding: 0.25em 3em;
-    transition: all 0.3s ease;
+.projetos button {
+    width: 260px;
 }
 
 .projetos__botao:hover {
     transform: scale(1.05);
-    transition: all 0.3s ease;
+    transition: all 0.35s ease;
     box-shadow: 4px 2px 0.5em rgba(255, 255, 255, 0.244);
+}
+
+.projetos__botao--alt {
+    color: var(--color-scrollbar);
+    border-color: var(--color-scrollbar);
+}
+
+.projetos__botao--alt:hover {
+    background-color: unset;
+    color: var(--color-scrollbar);
+    border-color: var(--color-scrollbar);
+    cursor: not-allowed;
 }
 
 
