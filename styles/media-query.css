@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+@media screen and (max-height: 528px) {
+    /* HERO */
+
+    .hero {
+        height: auto;
+    }
+}
+
 @media screen and (min-width: 576px) {
 
     /* CONTATOS */
@@ -72,7 +80,6 @@
     /* HERO */
 
     .hero {
-        height: 600px;
         flex-direction: row;
     }
 }

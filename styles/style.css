@@ -22,7 +22,7 @@
     --color-background-muted: #0000004c;
     --color-text: #e1e1e1;
     --color-text-muted: #e1e1e1ae;
-    --color-shadow: rgba(255, 255, 255, 0.244);
+    --color-shadow: #ffffff3e;
     --color-scrollbar: #858585;
 
     --color-logo: #510094;
@@ -208,7 +208,7 @@ main {
     text-align: center;
 }
 
-section{
+section {
     margin: 2em auto;
     padding: 1em 1.5em;
 }
@@ -218,6 +218,8 @@ section{
 
 .hero {
     padding: 3em 1em;
+    height: 82vh;
+
     
     display: flex;
     flex-direction: column-reverse;
