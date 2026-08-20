@@ -1,7 +1,12 @@
 [
     {
-        "nome": "Simulação de fila de hospital",
-        "descricao": "Esse programa simula o sistema de um hospital fictício, que realiza o atendimento de seus pacientes baseado em seu nível de urgência.",
+        "nome": "Site para divulgação de projetos da UFRRJ",
+        "descricao": "Site desenvolvido para apresentar as atividades extensionistas do curso de Ciência da Computação, além de seus impactos na comunidade local.",
+        "link": "https://samuelsilva07.github.io/divulgacao-extensionistas-ufrrj/"
+    },
+    {
+        "nome": "Recepção de fila de hospital",
+        "descricao": "Esse programa auxilia na gerência da fila de um hospital fictício, que realiza o atendimento de seus pacientes baseado em seu nível de urgência.",
         "link": "https://github.com/samuelsilva07/fila-hospital-C"
     },
     {
@@ -16,7 +21,7 @@
     },
     {
         "nome": "Sistema para loja de informática",
-        "descricao": "Software para o atendimento de clientes e gerenciamento de estoque/serviços para uma empresa de informática fictícia, desenvolvido em Java",
+        "descricao": "Sistema e-commerce para o atendimento de clientes e gerenciamento de estoque para uma empresa de informática, desenvolvido em Java",
         "link": null
     }
 ]
