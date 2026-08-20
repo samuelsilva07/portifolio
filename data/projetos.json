@@ -6,7 +6,7 @@
     },
     {
         "nome": "Recepção de fila de hospital",
-        "descricao": "Esse programa auxilia na gerência da fila de um hospital fictício, que realiza o atendimento de seus pacientes baseado em seu nível de urgência.",
+        "descricao": "Esse programa auxilia na manutenção da fila de um hospital, que realiza o atendimento de seus pacientes baseado em seu nível de urgência.",
         "link": "https://github.com/samuelsilva07/fila-hospital-C"
     },
     {
