@@ -20,8 +20,13 @@
         "link": "https://github.com/samuelsilva07/analise-redes-sociais"
     },
     {
-        "nome": "Sistema para loja de informática",
-        "descricao": "Sistema e-commerce para o atendimento de clientes e gerenciamento de estoque para uma empresa de informática, desenvolvido em Java",
+        "nome": "Software de gestão para professores",
+        "descricao": "Sistema desenvolvido para auxiliar professores a organizar suas turmas e gerenciar o desempenho acadêmico de seus alunos, implementado em Java",
+        "link": null
+    },
+    {
+        "nome": "Sistema para e-commerce de informática",
+        "descricao": "Plataforma web para uma loja virtual de produtos de tecnologia, proporcionando o autoatendimento aos clientes e atualização automática do estoque.",
         "link": null
     }
 ]
